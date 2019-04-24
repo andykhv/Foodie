@@ -6,6 +6,7 @@ target 'Foodie' do
   use_frameworks!
 
   # Pods for Foodie
+  pod 'SwiftLint'
 
   target 'FoodieTests' do
     inherit! :search_paths

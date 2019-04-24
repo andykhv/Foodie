@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gq4-AX-Hxp">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LandingController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="LandingController" id="BYZ-38-t0r" customClass="LandingController" customModule="Foodie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AEb-lU-Dtr">
+                                <rect key="frame" x="118.33333333333333" y="362.33333333333331" width="138.66666666666669" height="87.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foodie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vv2-ii-kMj">
+                                        <rect key="frame" x="0.0" y="0.0" width="138.66666666666666" height="57.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <color key="textColor" red="0.94509803920000002" green="0.65098039220000004" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lz0-XA-UN2">
+                                        <rect key="frame" x="0.0" y="57.333333333333371" width="138.66666666666666" height="30"/>
+                                        <state key="normal" title="Find a Place to Eat!"/>
+                                        <connections>
+                                            <segue destination="4uB-g3-0vE" kind="show" id="KTi-oH-VDx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ID5-JT-RRz">
+                                <rect key="frame" x="166.66666666666666" y="762" width="42" height="30"/>
+                                <state key="normal" title="Log In"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901960784312" green="1" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ID5-JT-RRz" secondAttribute="bottom" constant="20" symbolic="YES" id="Cr4-yJ-gV4"/>
+                            <constraint firstItem="AEb-lU-Dtr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LhS-cn-YNg"/>
+                            <constraint firstItem="AEb-lU-Dtr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wxr-4D-uRG"/>
+                            <constraint firstItem="ID5-JT-RRz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bNH-WQ-y8e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yJM-l1-ZUJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1615.2" y="22.906403940886701"/>
+        </scene>
+        <!--What Do You Want?-->
+        <scene sceneID="8ox-2K-vni">
+            <objects>
+                <viewController title="What Do You Want?" id="4uB-g3-0vE" customClass="QueryController" customModule="Foodie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qVK-HJ-Eux">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" text="" placeholder="Find burgers, boba, chinese food, etc..." translatesAutoresizingMaskIntoConstraints="NO" id="a3x-fx-Xhx">
+                                <rect key="frame" x="0.0" y="88" width="375" height="56"/>
+                                <color key="barTintColor" red="0.94509803920000002" green="0.65098039220000004" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <searchBar contentMode="redraw" placeholder="Current Location" translatesAutoresizingMaskIntoConstraints="NO" id="qWL-9q-NvY">
+                                <rect key="frame" x="0.0" y="144" width="375" height="56"/>
+                                <color key="barTintColor" red="0.94509803920000002" green="0.65098039220000004" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's Your Budget?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pB-by-IJM">
+                                <rect key="frame" x="5" y="225" width="365" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Xpw-ko-GWf">
+                                <rect key="frame" x="37.666666666666657" y="274" width="300" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Beb-uJ-a1Y"/>
+                                    <constraint firstAttribute="width" constant="300" id="n3H-RJ-Jrq"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="$"/>
+                                    <segment title="$$"/>
+                                    <segment title="$$$"/>
+                                    <segment title="$$$$"/>
+                                </segments>
+                                <color key="tintColor" red="0.94509803920000002" green="0.65098039220000004" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance Radius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLe-0h-qld">
+                                <rect key="frame" x="5" y="340" width="365" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="13" minValue="1" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="Tan-rd-ABw">
+                                <rect key="frame" x="18" y="384" width="339" height="31"/>
+                                <color key="tintColor" red="0.94509803920000002" green="0.65098039220000004" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901959999995" green="1" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qWL-9q-NvY" firstAttribute="top" secondItem="a3x-fx-Xhx" secondAttribute="bottom" id="0Gi-Ah-tvN"/>
+                            <constraint firstItem="bLe-0h-qld" firstAttribute="top" secondItem="Xpw-ko-GWf" secondAttribute="bottom" constant="30" id="3Rz-h3-6dq"/>
+                            <constraint firstItem="8pB-by-IJM" firstAttribute="top" secondItem="qWL-9q-NvY" secondAttribute="bottom" constant="25" id="9Qt-S4-G3z"/>
+                            <constraint firstItem="Xpw-ko-GWf" firstAttribute="top" secondItem="8pB-by-IJM" secondAttribute="bottom" constant="20" id="BSN-d2-JlU"/>
+                            <constraint firstItem="a3x-fx-Xhx" firstAttribute="trailing" secondItem="BL5-vQ-DVG" secondAttribute="trailing" id="DIx-hP-JDz"/>
+                            <constraint firstItem="Tan-rd-ABw" firstAttribute="leading" secondItem="BL5-vQ-DVG" secondAttribute="leading" constant="20" id="HJF-uu-ajI"/>
+                            <constraint firstItem="a3x-fx-Xhx" firstAttribute="leading" secondItem="BL5-vQ-DVG" secondAttribute="leading" id="HbC-aD-UE5"/>
+                            <constraint firstItem="qWL-9q-NvY" firstAttribute="leading" secondItem="BL5-vQ-DVG" secondAttribute="leading" id="J9q-De-Ih2"/>
+                            <constraint firstItem="BL5-vQ-DVG" firstAttribute="trailing" secondItem="8pB-by-IJM" secondAttribute="trailing" constant="5" id="LIe-2J-PSA"/>
+                            <constraint firstItem="Tan-rd-ABw" firstAttribute="centerX" secondItem="bLe-0h-qld" secondAttribute="centerX" id="Ll8-zZ-2Ff"/>
+                            <constraint firstItem="bLe-0h-qld" firstAttribute="centerX" secondItem="Xpw-ko-GWf" secondAttribute="centerX" id="SG6-N0-McW"/>
+                            <constraint firstItem="BL5-vQ-DVG" firstAttribute="trailing" secondItem="bLe-0h-qld" secondAttribute="trailing" constant="5" id="TtW-Hd-ebz"/>
+                            <constraint firstItem="bLe-0h-qld" firstAttribute="leading" secondItem="BL5-vQ-DVG" secondAttribute="leading" constant="5" id="ULv-vU-oWN"/>
+                            <constraint firstItem="Tan-rd-ABw" firstAttribute="top" secondItem="bLe-0h-qld" secondAttribute="bottom" constant="15" id="WaS-cW-cef"/>
+                            <constraint firstItem="qWL-9q-NvY" firstAttribute="trailing" secondItem="BL5-vQ-DVG" secondAttribute="trailing" id="Xld-85-fjp"/>
+                            <constraint firstItem="8pB-by-IJM" firstAttribute="leading" secondItem="BL5-vQ-DVG" secondAttribute="leading" constant="5" id="cgm-rs-K5a"/>
+                            <constraint firstItem="Xpw-ko-GWf" firstAttribute="centerX" secondItem="8pB-by-IJM" secondAttribute="centerX" id="doZ-Uv-Ddd"/>
+                            <constraint firstItem="8pB-by-IJM" firstAttribute="centerX" secondItem="qWL-9q-NvY" secondAttribute="centerX" id="fto-2t-q7t"/>
+                            <constraint firstItem="a3x-fx-Xhx" firstAttribute="top" secondItem="BL5-vQ-DVG" secondAttribute="top" id="kMO-T2-1bl"/>
+                            <constraint firstItem="BL5-vQ-DVG" firstAttribute="trailing" secondItem="Tan-rd-ABw" secondAttribute="trailing" constant="20" id="zkD-ad-KIi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BL5-vQ-DVG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="What Do You Want?" id="8KP-bX-alU">
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="qxj-ql-ZP6"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbV-Tq-5eX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2732" y="22.906403940886701"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cj9-mb-454">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gq4-AX-Hxp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bKu-cG-cmC">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WUv-Lk-x5F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tzN-zz-zat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="439" y="23"/>
+        </scene>
+    </scenes>
+</document>

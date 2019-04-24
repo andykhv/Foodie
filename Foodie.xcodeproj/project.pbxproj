@@ -11,12 +11,12 @@
 		1FFE214142B3F7B9D08E2FD5 /* Pods_FoodieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86BCF420637CC63CD6218C01 /* Pods_FoodieUITests.framework */; };
 		47140E983C0526156F8CFAAF /* Pods_Foodie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073EF10982B6CB22AD8F92C4 /* Pods_Foodie.framework */; };
 		A10C11502264018600ED634F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C114F2264018600ED634F /* AppDelegate.swift */; };
-		A10C11522264018600ED634F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C11512264018600ED634F /* ViewController.swift */; };
+		A10C11522264018600ED634F /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C11512264018600ED634F /* LandingController.swift */; };
 		A10C11552264018600ED634F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A10C11532264018600ED634F /* Main.storyboard */; };
 		A10C11572264018800ED634F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10C11562264018800ED634F /* Assets.xcassets */; };
-		A10C115A2264018800ED634F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A10C11582264018800ED634F /* LaunchScreen.storyboard */; };
 		A10C11652264018800ED634F /* FoodieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C11642264018800ED634F /* FoodieTests.swift */; };
 		A10C11702264018800ED634F /* FoodieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C116F2264018800ED634F /* FoodieUITests.swift */; };
+		A157BD59226FCC3B00C30618 /* QueryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A157BD58226FCC3B00C30618 /* QueryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,10 +44,9 @@
 		86BCF420637CC63CD6218C01 /* Pods_FoodieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10C114C2264018600ED634F /* Foodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10C114F2264018600ED634F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A10C11512264018600ED634F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A10C11512264018600ED634F /* LandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
 		A10C11542264018600ED634F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A10C11562264018800ED634F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A10C11592264018800ED634F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A10C115B2264018800ED634F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A10C11602264018800ED634F /* FoodieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10C11642264018800ED634F /* FoodieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodieTests.swift; sourceTree = "<group>"; };
@@ -55,6 +54,7 @@
 		A10C116B2264018800ED634F /* FoodieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10C116F2264018800ED634F /* FoodieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodieUITests.swift; sourceTree = "<group>"; };
 		A10C11712264018800ED634F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A157BD58226FCC3B00C30618 /* QueryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryController.swift; sourceTree = "<group>"; };
 		A76933D7E106C0A04B0E442F /* Pods-FoodieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodieUITests.debug.xcconfig"; path = "Target Support Files/Pods-FoodieUITests/Pods-FoodieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE84E00C37BBC0EA9906A99E /* Pods-Foodie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.release.xcconfig"; path = "Target Support Files/Pods-Foodie/Pods-Foodie.release.xcconfig"; sourceTree = "<group>"; };
 		D0938E79C73FEE3123B6A8C6 /* Pods-FoodieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodieTests.debug.xcconfig"; path = "Target Support Files/Pods-FoodieTests/Pods-FoodieTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,11 +114,12 @@
 		A10C114E2264018600ED634F /* Foodie */ = {
 			isa = PBXGroup;
 			children = (
+				A157BD57226FAD0600C30618 /* Views */,
+				A157BD56226FACE800C30618 /* Services */,
+				A157BD55226FACD800C30618 /* Models */,
+				A157BD54226FACC900C30618 /* Controllers */,
 				A10C114F2264018600ED634F /* AppDelegate.swift */,
-				A10C11512264018600ED634F /* ViewController.swift */,
-				A10C11532264018600ED634F /* Main.storyboard */,
 				A10C11562264018800ED634F /* Assets.xcassets */,
-				A10C11582264018800ED634F /* LaunchScreen.storyboard */,
 				A10C115B2264018800ED634F /* Info.plist */,
 			);
 			path = Foodie;
@@ -142,6 +143,37 @@
 			path = FoodieUITests;
 			sourceTree = "<group>";
 		};
+		A157BD54226FACC900C30618 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A10C11512264018600ED634F /* LandingController.swift */,
+				A157BD58226FCC3B00C30618 /* QueryController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A157BD55226FACD800C30618 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A157BD56226FACE800C30618 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A157BD57226FAD0600C30618 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A10C11532264018600ED634F /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		ACEFF229F86402C54DCF6E86 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +184,6 @@
 				A76933D7E106C0A04B0E442F /* Pods-FoodieUITests.debug.xcconfig */,
 				5912C90658CBF8FCD719CE1B /* Pods-FoodieUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -273,7 +304,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A10C115A2264018800ED634F /* LaunchScreen.storyboard in Resources */,
 				A10C11572264018800ED634F /* Assets.xcassets in Resources */,
 				A10C11552264018600ED634F /* Main.storyboard in Resources */,
 			);
@@ -369,7 +399,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A10C11522264018600ED634F /* ViewController.swift in Sources */,
+				A10C11522264018600ED634F /* LandingController.swift in Sources */,
+				A157BD59226FCC3B00C30618 /* QueryController.swift in Sources */,
 				A10C11502264018600ED634F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,14 +443,6 @@
 				A10C11542264018600ED634F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A10C11582264018800ED634F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A10C11592264018800ED634F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
