@@ -16,7 +16,10 @@
 		A10C11572264018800ED634F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10C11562264018800ED634F /* Assets.xcassets */; };
 		A10C11652264018800ED634F /* FoodieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C11642264018800ED634F /* FoodieTests.swift */; };
 		A10C11702264018800ED634F /* FoodieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C116F2264018800ED634F /* FoodieUITests.swift */; };
+		A14A1A082277879900A17F1C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A1A072277879900A17F1C /* Restaurant.swift */; };
+		A14A1A092277879900A17F1C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A1A072277879900A17F1C /* Restaurant.swift */; };
 		A157BD59226FCC3B00C30618 /* QueryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A157BD58226FCC3B00C30618 /* QueryController.swift */; };
+		A15D0B3A2276698500BBA4F8 /* RestaurantQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15D0B392276698500BBA4F8 /* RestaurantQuery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +57,9 @@
 		A10C116B2264018800ED634F /* FoodieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10C116F2264018800ED634F /* FoodieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodieUITests.swift; sourceTree = "<group>"; };
 		A10C11712264018800ED634F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A14A1A072277879900A17F1C /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		A157BD58226FCC3B00C30618 /* QueryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryController.swift; sourceTree = "<group>"; };
+		A15D0B392276698500BBA4F8 /* RestaurantQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantQuery.swift; sourceTree = "<group>"; };
 		A76933D7E106C0A04B0E442F /* Pods-FoodieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodieUITests.debug.xcconfig"; path = "Target Support Files/Pods-FoodieUITests/Pods-FoodieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE84E00C37BBC0EA9906A99E /* Pods-Foodie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.release.xcconfig"; path = "Target Support Files/Pods-Foodie/Pods-Foodie.release.xcconfig"; sourceTree = "<group>"; };
 		D0938E79C73FEE3123B6A8C6 /* Pods-FoodieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodieTests.debug.xcconfig"; path = "Target Support Files/Pods-FoodieTests/Pods-FoodieTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +160,8 @@
 		A157BD55226FACD800C30618 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A15D0B392276698500BBA4F8 /* RestaurantQuery.swift */,
+				A14A1A072277879900A17F1C /* Restaurant.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -399,9 +406,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A14A1A082277879900A17F1C /* Restaurant.swift in Sources */,
 				A10C11522264018600ED634F /* LandingController.swift in Sources */,
 				A157BD59226FCC3B00C30618 /* QueryController.swift in Sources */,
 				A10C11502264018600ED634F /* AppDelegate.swift in Sources */,
+				A15D0B3A2276698500BBA4F8 /* RestaurantQuery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A14A1A092277879900A17F1C /* Restaurant.swift in Sources */,
 				A10C11652264018800ED634F /* FoodieTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
