@@ -10,8 +10,9 @@ class RestaurantQuery {
     // MARK: properties
     var query: String
     var location: String?
-    var latitude: Float?
-    var longitude: Float?
+    var latitude: Double?
+    var longitude: Double?
+    var useCurrentLoc: Bool?
     var budget: Int
     var distance: Int
     

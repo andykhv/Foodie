@@ -75,13 +75,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's Your Budget?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pB-by-IJM">
-                                <rect key="frame" x="5" y="225" width="365" height="29"/>
+                                <rect key="frame" x="5" y="225" width="365" height="28.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Xpw-ko-GWf">
-                                <rect key="frame" x="37.666666666666657" y="274" width="300" height="37"/>
+                                <rect key="frame" x="37.666666666666657" y="273.66666666666669" width="300" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="Beb-uJ-a1Y"/>
                                     <constraint firstAttribute="width" constant="300" id="n3H-RJ-Jrq"/>
@@ -93,17 +93,43 @@
                                     <segment title="$$$$"/>
                                 </segments>
                                 <color key="tintColor" red="0.94509803920000002" green="0.65098039220000004" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="budgetChanged:" destination="4uB-g3-0vE" eventType="valueChanged" id="JqZ-LL-cg1"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance Radius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLe-0h-qld">
-                                <rect key="frame" x="5" y="340" width="365" height="29"/>
+                                <rect key="frame" x="5" y="339.66666666666669" width="365" height="28.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="13" minValue="1" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="Tan-rd-ABw">
-                                <rect key="frame" x="18" y="384" width="339" height="31"/>
+                                <rect key="frame" x="18" y="383.33333333333331" width="339" height="31"/>
                                 <color key="tintColor" red="0.94509803920000002" green="0.65098039220000004" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="distanceChanged:" destination="4uB-g3-0vE" eventType="valueChanged" id="e9r-kY-5w1"/>
+                                </connections>
                             </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUS-4Q-fDL">
+                                <rect key="frame" x="132.66666666666666" y="421" width="110" height="28.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zx-dU-vDn">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="28.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4r-ZE-Kad">
+                                        <rect key="frame" x="55" y="0.0" width="55" height="28.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="g4r-ZE-Kad" firstAttribute="width" secondItem="2Zx-dU-vDn" secondAttribute="width" id="zYM-X8-KrN"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901959999995" green="1" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -112,11 +138,13 @@
                             <constraint firstItem="8pB-by-IJM" firstAttribute="top" secondItem="qWL-9q-NvY" secondAttribute="bottom" constant="25" id="9Qt-S4-G3z"/>
                             <constraint firstItem="Xpw-ko-GWf" firstAttribute="top" secondItem="8pB-by-IJM" secondAttribute="bottom" constant="20" id="BSN-d2-JlU"/>
                             <constraint firstItem="a3x-fx-Xhx" firstAttribute="trailing" secondItem="BL5-vQ-DVG" secondAttribute="trailing" id="DIx-hP-JDz"/>
+                            <constraint firstItem="cUS-4Q-fDL" firstAttribute="centerX" secondItem="BL5-vQ-DVG" secondAttribute="centerX" id="DZm-nx-avW"/>
                             <constraint firstItem="Tan-rd-ABw" firstAttribute="leading" secondItem="BL5-vQ-DVG" secondAttribute="leading" constant="20" id="HJF-uu-ajI"/>
                             <constraint firstItem="a3x-fx-Xhx" firstAttribute="leading" secondItem="BL5-vQ-DVG" secondAttribute="leading" id="HbC-aD-UE5"/>
                             <constraint firstItem="qWL-9q-NvY" firstAttribute="leading" secondItem="BL5-vQ-DVG" secondAttribute="leading" id="J9q-De-Ih2"/>
                             <constraint firstItem="BL5-vQ-DVG" firstAttribute="trailing" secondItem="8pB-by-IJM" secondAttribute="trailing" constant="5" id="LIe-2J-PSA"/>
                             <constraint firstItem="Tan-rd-ABw" firstAttribute="centerX" secondItem="bLe-0h-qld" secondAttribute="centerX" id="Ll8-zZ-2Ff"/>
+                            <constraint firstItem="cUS-4Q-fDL" firstAttribute="top" secondItem="Tan-rd-ABw" secondAttribute="bottom" constant="7.6666666666666856" id="Qmu-h9-MB9"/>
                             <constraint firstItem="bLe-0h-qld" firstAttribute="centerX" secondItem="Xpw-ko-GWf" secondAttribute="centerX" id="SG6-N0-McW"/>
                             <constraint firstItem="BL5-vQ-DVG" firstAttribute="trailing" secondItem="bLe-0h-qld" secondAttribute="trailing" constant="5" id="TtW-Hd-ebz"/>
                             <constraint firstItem="bLe-0h-qld" firstAttribute="leading" secondItem="BL5-vQ-DVG" secondAttribute="leading" constant="5" id="ULv-vU-oWN"/>
@@ -133,6 +161,13 @@
                     <navigationItem key="navigationItem" title="What Do You Want?" id="8KP-bX-alU">
                         <barButtonItem key="rightBarButtonItem" title="Search" id="qxj-ql-ZP6"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="budgetSegCtrl" destination="Xpw-ko-GWf" id="v6q-Z5-IxG"/>
+                        <outlet property="distanceLabel" destination="2Zx-dU-vDn" id="iSb-cM-QpR"/>
+                        <outlet property="distanceSlider" destination="Tan-rd-ABw" id="Tdn-fw-jsZ"/>
+                        <outlet property="foodSearchBar" destination="a3x-fx-Xhx" id="6pf-3X-hYq"/>
+                        <outlet property="locSearchBar" destination="qWL-9q-NvY" id="efd-Kv-iIg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbV-Tq-5eX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
