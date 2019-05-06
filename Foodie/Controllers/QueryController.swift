@@ -26,6 +26,13 @@ class QueryController: UIViewController, UISearchBarDelegate, CLLocationManagerD
         foodSearchBar.delegate = self
         locSearchBar.delegate = self
         restaurantQuery = RestaurantQuery()
+        
+        // set location search icon to "LocationIcon"
+        let locationIcon: UIImage? = UIImage(named: "LocationIcon")
+        locSearchBar.setImage(locationIcon, for: .search, state: .normal)
+        // set food search icon to "SearchIcon"
+        let searchIcon: UIImage? = UIImage(named: "SearchIcon")
+        foodSearchBar.setImage(searchIcon, for: .search, state: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
