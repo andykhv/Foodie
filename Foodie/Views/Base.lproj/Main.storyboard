@@ -166,7 +166,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="budgetSegCtrl" destination="Xpw-ko-GWf" id="v6q-Z5-IxG"/>
+                        <outlet property="budgetSegementControl" destination="Xpw-ko-GWf" id="v6q-Z5-IxG"/>
                         <outlet property="distanceLabel" destination="2Zx-dU-vDn" id="iSb-cM-QpR"/>
                         <outlet property="distanceSlider" destination="Tan-rd-ABw" id="Tdn-fw-jsZ"/>
                         <outlet property="foodSearchBar" destination="a3x-fx-Xhx" id="6pf-3X-hYq"/>
