@@ -20,7 +20,7 @@ class QueryController: UIViewController, UISearchBarDelegate, CLLocationManagerD
     var locationManager: CLLocationManager!
     var restaurantQuery: RestaurantQuery!
     
-    // MARK: Lifecycle
+    // MARK: ViewController lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         foodSearchBar.delegate = self
@@ -102,17 +102,4 @@ class QueryController: UIViewController, UISearchBarDelegate, CLLocationManagerD
             locationManager.startUpdatingLocation()
         }
     }
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

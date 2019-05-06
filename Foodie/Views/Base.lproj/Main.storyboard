@@ -159,7 +159,11 @@
                         <viewLayoutGuide key="safeArea" id="BL5-vQ-DVG"/>
                     </view>
                     <navigationItem key="navigationItem" title="What Do You Want?" id="8KP-bX-alU">
-                        <barButtonItem key="rightBarButtonItem" title="Search" id="qxj-ql-ZP6"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="qxj-ql-ZP6">
+                            <connections>
+                                <segue destination="kyo-gH-ji2" kind="show" id="3oi-BD-on6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="budgetSegCtrl" destination="Xpw-ko-GWf" id="v6q-Z5-IxG"/>
@@ -172,6 +176,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbV-Tq-5eX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2732" y="22.906403940886701"/>
+        </scene>
+        <!--Shake Controller-->
+        <scene sceneID="FfF-Fp-s5d">
+            <objects>
+                <viewController id="kyo-gH-ji2" customClass="ShakeController" customModule="Foodie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aAS-1d-cyZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PUA-Gi-sP1">
+                                <rect key="frame" x="43.666666666666657" y="295" width="288" height="276.33333333333326"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake your phone to get a restaurant!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCx-rd-oEX">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhoneShake" translatesAutoresizingMaskIntoConstraints="NO" id="340-78-fmQ">
+                                        <rect key="frame" x="0.0" y="20.333333333333314" width="288" height="256"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cCx-rd-oEX" secondAttribute="trailing" id="0Xt-jB-Dug"/>
+                                    <constraint firstItem="340-78-fmQ" firstAttribute="leading" secondItem="PUA-Gi-sP1" secondAttribute="leading" id="8KW-u9-P8C"/>
+                                    <constraint firstItem="340-78-fmQ" firstAttribute="top" secondItem="cCx-rd-oEX" secondAttribute="bottom" id="Ii7-MM-OV8"/>
+                                    <constraint firstAttribute="bottom" secondItem="340-78-fmQ" secondAttribute="bottom" id="L5n-xu-Zcg"/>
+                                    <constraint firstAttribute="trailing" secondItem="340-78-fmQ" secondAttribute="trailing" id="VXS-K9-EWe"/>
+                                    <constraint firstItem="cCx-rd-oEX" firstAttribute="leading" secondItem="PUA-Gi-sP1" secondAttribute="leading" id="eds-4c-Hci"/>
+                                    <constraint firstItem="cCx-rd-oEX" firstAttribute="top" secondItem="PUA-Gi-sP1" secondAttribute="top" id="usS-wp-2kQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901959999995" green="1" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PUA-Gi-sP1" firstAttribute="centerY" secondItem="xY0-OU-oPF" secondAttribute="centerY" id="XuC-sQ-Vj7"/>
+                            <constraint firstItem="PUA-Gi-sP1" firstAttribute="centerX" secondItem="xY0-OU-oPF" secondAttribute="centerX" id="pKg-hc-rLY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xY0-OU-oPF"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="340-78-fmQ" id="zyv-9E-MxC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Qp-Vo-eHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3853" y="23"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cj9-mb-454">
@@ -192,4 +243,7 @@
             <point key="canvasLocation" x="439" y="23"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PhoneShake" width="256" height="256"/>
+    </resources>
 </document>
