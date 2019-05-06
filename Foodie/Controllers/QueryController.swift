@@ -14,7 +14,7 @@ class QueryController: UIViewController, UISearchBarDelegate, CLLocationManagerD
     // MARK: Properties
     @IBOutlet weak var foodSearchBar: UISearchBar!
     @IBOutlet weak var locSearchBar: UISearchBar!
-    @IBOutlet weak var budgetSegCtrl: UISegmentedControl!
+    @IBOutlet weak var budgetSegementControl: UISegmentedControl!
     @IBOutlet weak var distanceSlider: UISlider!
     @IBOutlet weak var distanceLabel: UILabel!
     var locationManager: CLLocationManager!
@@ -78,7 +78,7 @@ class QueryController: UIViewController, UISearchBarDelegate, CLLocationManagerD
     // MARK: Actions
     // budgetSegCtrl value change
     @IBAction func budgetChanged(_ sender: Any) {
-        switch budgetSegCtrl.selectedSegmentIndex {
+        switch budgetSegementControl.selectedSegmentIndex {
         case 1:
             self.restaurantQuery.budget = 2
         case 2:
