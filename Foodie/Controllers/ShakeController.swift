@@ -13,6 +13,7 @@ import os.log
 class ShakeController: UIViewController {
     // MARK: Properties
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var infoLabel: UILabel!
     var loadingImage: UIImage!
     
     // MARK: ViewController lifecycle
@@ -29,7 +30,13 @@ class ShakeController: UIViewController {
     // MARK: UIResponder
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
+            // start vibration
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
+            // set label to "Finding a Restaurant..."
+            infoLabel.text = "Finding a Restaurant..."
+            
+            // change image to animated loading icon
             imageView.image = loadingImage
             os_log("shaking detected", log: OSLog.default, type: .debug)
         }
