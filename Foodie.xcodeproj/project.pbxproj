@@ -21,6 +21,7 @@
 		A157BD59226FCC3B00C30618 /* QueryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A157BD58226FCC3B00C30618 /* QueryController.swift */; };
 		A15D0B3A2276698500BBA4F8 /* RestaurantQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15D0B392276698500BBA4F8 /* RestaurantQuery.swift */; };
 		A1BD7530227FA3F7008ACD39 /* ShakeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD752F227FA3F7008ACD39 /* ShakeController.swift */; };
+		A1F9865E2284F68F002D0D3E /* YelpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9865D2284F68F002D0D3E /* YelpService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		A157BD58226FCC3B00C30618 /* QueryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryController.swift; sourceTree = "<group>"; };
 		A15D0B392276698500BBA4F8 /* RestaurantQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantQuery.swift; sourceTree = "<group>"; };
 		A1BD752F227FA3F7008ACD39 /* ShakeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeController.swift; sourceTree = "<group>"; };
+		A1F9865D2284F68F002D0D3E /* YelpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpService.swift; sourceTree = "<group>"; };
 		A76933D7E106C0A04B0E442F /* Pods-FoodieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodieUITests.debug.xcconfig"; path = "Target Support Files/Pods-FoodieUITests/Pods-FoodieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE84E00C37BBC0EA9906A99E /* Pods-Foodie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.release.xcconfig"; path = "Target Support Files/Pods-Foodie/Pods-Foodie.release.xcconfig"; sourceTree = "<group>"; };
 		D0938E79C73FEE3123B6A8C6 /* Pods-FoodieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodieTests.debug.xcconfig"; path = "Target Support Files/Pods-FoodieTests/Pods-FoodieTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 		A157BD56226FACE800C30618 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A1F9865D2284F68F002D0D3E /* YelpService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				A10C11482264018600ED634F /* Sources */,
 				A10C11492264018600ED634F /* Frameworks */,
 				A10C114A2264018600ED634F /* Resources */,
+				CFC8EF3DF71CC630ACA2F1C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -402,6 +406,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CFC8EF3DF71CC630ACA2F1C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Foodie/Pods-Foodie-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Foodie/Pods-Foodie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -410,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1BD7530227FA3F7008ACD39 /* ShakeController.swift in Sources */,
+				A1F9865E2284F68F002D0D3E /* YelpService.swift in Sources */,
 				A14A1A082277879900A17F1C /* Restaurant.swift in Sources */,
 				A10C11522264018600ED634F /* LandingController.swift in Sources */,
 				A157BD59226FCC3B00C30618 /* QueryController.swift in Sources */,

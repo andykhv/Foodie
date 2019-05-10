@@ -14,9 +14,9 @@ class QueryController: UIViewController, UISearchBarDelegate, CLLocationManagerD
     // MARK: Properties
     @IBOutlet weak var foodSearchBar: UISearchBar!
     @IBOutlet weak var locSearchBar: UISearchBar!
-    @IBOutlet weak var budgetSegementControl: UISegmentedControl!
-    @IBOutlet weak var distanceSlider: UISlider!
-    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var priceSegementControl: UISegmentedControl!
+    @IBOutlet weak var radiusSlider: UISlider!
+    @IBOutlet weak var radiusLabel: UILabel!
     var locationManager: CLLocationManager!
     var restaurantQuery: RestaurantQuery!
     
@@ -37,7 +37,7 @@ class QueryController: UIViewController, UISearchBarDelegate, CLLocationManagerD
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        restaurantQuery.distance = 12 // default distance is 12
+        restaurantQuery.radius = 12 // default radius is 12
         determineCurrentLoc()
     }
     
@@ -53,7 +53,7 @@ class QueryController: UIViewController, UISearchBarDelegate, CLLocationManagerD
             return
         }
         if (searchBar == foodSearchBar) {
-            self.restaurantQuery.query = unwrappedSearchText
+            self.restaurantQuery.term = unwrappedSearchText
             os_log("foodSearchBar edited", log: OSLog.default, type: .debug)
         } else if (searchBar == locSearchBar) {
             searchBar.text = "Current Location"
@@ -76,26 +76,26 @@ class QueryController: UIViewController, UISearchBarDelegate, CLLocationManagerD
     }
     
     // MARK: Actions
-    // budgetSegCtrl value change
-    @IBAction func budgetChanged(_ sender: Any) {
-        switch budgetSegementControl.selectedSegmentIndex {
+    // priceSegCtrl value change
+    @IBAction func priceChanged(_ sender: Any) {
+        switch priceSegementControl.selectedSegmentIndex {
         case 1:
-            self.restaurantQuery.budget = 2
+            self.restaurantQuery.price = 2
         case 2:
-            self.restaurantQuery.budget = 3
+            self.restaurantQuery.price = 3
         case 3:
-            self.restaurantQuery.budget = 4
+            self.restaurantQuery.price = 4
         default:
-            self.restaurantQuery.budget = 1
+            self.restaurantQuery.price = 1
         }
-        os_log("budget seg control changed", log: OSLog.default, type: .debug)
+        os_log("price seg control changed", log: OSLog.default, type: .debug)
     }
     
-    // distanceSlider value change
-    @IBAction func distanceChanged(_ sender: UISlider) {
-        self.restaurantQuery.distance = Int(distanceSlider.value)
-        distanceLabel.text = String(self.restaurantQuery.distance)
-        os_log("distance changed", log: OSLog.default, type: .debug)
+    // radiusSlider value change
+    @IBAction func radiusChanged(_ sender: UISlider) {
+        self.restaurantQuery.radius = Int(radiusSlider.value)
+        radiusLabel.text = String(self.restaurantQuery.radius)
+        os_log("radius changed", log: OSLog.default, type: .debug)
     }
     
     // MARK: Private

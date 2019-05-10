@@ -8,18 +8,19 @@
 
 class RestaurantQuery {
     // MARK: properties
-    var query: String
+    var term: String
     var location: String?
     var latitude: Double?
     var longitude: Double?
-    var useCurrentLoc: Bool?
-    var budget: Int
-    var distance: Int
+    var useCurrentLoc: Bool
+    var price: Int
+    var radius: Int
     
     // MARK: init
     init() {
-        self.query = ""
-        self.budget = 1
-        self.distance = 1
+        self.term = ""
+        self.price = 1
+        self.radius = 1
+        self.useCurrentLoc = false
     }
 }

@@ -106,4 +106,8 @@ class FoodieTests: XCTestCase {
         }
     }
     
+    func testYelpService() {
+        
+    }
+    
 }

@@ -7,6 +7,7 @@ target 'Foodie' do
 
   # Pods for Foodie
   pod 'SwiftLint'
+  pod 'Alamofire'
 
   target 'FoodieTests' do
     inherit! :search_paths
