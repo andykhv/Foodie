@@ -14,7 +14,7 @@ class QueryController: UIViewController, UISearchBarDelegate, CLLocationManagerD
     // MARK: Properties
     @IBOutlet weak var foodSearchBar: UISearchBar!
     @IBOutlet weak var locSearchBar: UISearchBar!
-    @IBOutlet weak var priceSegementControl: UISegmentedControl!
+    @IBOutlet weak var priceSegmentControl: UISegmentedControl!
     @IBOutlet weak var radiusSlider: UISlider!
     @IBOutlet weak var radiusLabel: UILabel!
     var locationManager: CLLocationManager!
@@ -78,7 +78,7 @@ class QueryController: UIViewController, UISearchBarDelegate, CLLocationManagerD
     // MARK: Actions
     // priceSegCtrl value change
     @IBAction func priceChanged(_ sender: Any) {
-        switch priceSegementControl.selectedSegmentIndex {
+        switch priceSegmentControl.selectedSegmentIndex {
         case 1:
             self.restaurantQuery.price = 2
         case 2:

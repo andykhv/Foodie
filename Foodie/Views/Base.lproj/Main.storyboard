@@ -179,11 +179,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="budgetSegementControl" destination="Xpw-ko-GWf" id="v6q-Z5-IxG"/>
-                        <outlet property="distanceLabel" destination="2Zx-dU-vDn" id="iSb-cM-QpR"/>
-                        <outlet property="distanceSlider" destination="Tan-rd-ABw" id="Tdn-fw-jsZ"/>
                         <outlet property="foodSearchBar" destination="a3x-fx-Xhx" id="6pf-3X-hYq"/>
                         <outlet property="locSearchBar" destination="qWL-9q-NvY" id="efd-Kv-iIg"/>
+                        <outlet property="priceSegmentControl" destination="Xpw-ko-GWf" id="N3p-b3-66O"/>
+                        <outlet property="radiusLabel" destination="2Zx-dU-vDn" id="D7D-Im-qOi"/>
+                        <outlet property="radiusSlider" destination="Tan-rd-ABw" id="KjI-L1-SaD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbV-Tq-5eX" userLabel="First Responder" sceneMemberID="firstResponder"/>
