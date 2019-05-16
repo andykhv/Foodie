@@ -21,6 +21,7 @@
 		A157BD59226FCC3B00C30618 /* QueryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A157BD58226FCC3B00C30618 /* QueryController.swift */; };
 		A15D0B3A2276698500BBA4F8 /* RestaurantQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15D0B392276698500BBA4F8 /* RestaurantQuery.swift */; };
 		A1BD7530227FA3F7008ACD39 /* ShakeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD752F227FA3F7008ACD39 /* ShakeController.swift */; };
+		A1C87B37228D0AA300B62568 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1C87B36228D0AA300B62568 /* Keys.plist */; };
 		A1F9865E2284F68F002D0D3E /* YelpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9865D2284F68F002D0D3E /* YelpService.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		A157BD58226FCC3B00C30618 /* QueryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryController.swift; sourceTree = "<group>"; };
 		A15D0B392276698500BBA4F8 /* RestaurantQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantQuery.swift; sourceTree = "<group>"; };
 		A1BD752F227FA3F7008ACD39 /* ShakeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeController.swift; sourceTree = "<group>"; };
+		A1C87B36228D0AA300B62568 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		A1F9865D2284F68F002D0D3E /* YelpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpService.swift; sourceTree = "<group>"; };
 		A76933D7E106C0A04B0E442F /* Pods-FoodieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodieUITests.debug.xcconfig"; path = "Target Support Files/Pods-FoodieUITests/Pods-FoodieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE84E00C37BBC0EA9906A99E /* Pods-Foodie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.release.xcconfig"; path = "Target Support Files/Pods-Foodie/Pods-Foodie.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				A10C114F2264018600ED634F /* AppDelegate.swift */,
 				A10C11562264018800ED634F /* Assets.xcassets */,
 				A10C115B2264018800ED634F /* Info.plist */,
+				A1C87B36228D0AA300B62568 /* Keys.plist */,
 			);
 			path = Foodie;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1C87B37228D0AA300B62568 /* Keys.plist in Resources */,
 				A10C11572264018800ED634F /* Assets.xcassets in Resources */,
 				A10C11552264018600ED634F /* Main.storyboard in Resources */,
 			);
