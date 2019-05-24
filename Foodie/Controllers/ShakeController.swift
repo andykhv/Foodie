@@ -9,12 +9,14 @@
 import UIKit
 import AudioToolbox
 import os.log
+import Alamofire
 
 class ShakeController: UIViewController {
     // MARK: Properties
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var infoLabel: UILabel!
     var loadingImage: UIImage!
+    var restaurantQuery: RestaurantQuery!
     
     // MARK: ViewController lifecycle
     override func viewDidLoad() {
@@ -40,5 +42,12 @@ class ShakeController: UIViewController {
             imageView.image = loadingImage
             os_log("shaking detected", log: OSLog.default, type: .debug)
         }
+    }
+    
+    // MARK: private
+    private func loadRestaurantJson(_ response: DataResponse<Any>) -> Void {
+        // DataResponse -> String -> Restaurants struct
+        // randomize restaurant
+        // segue into RestaurantController (need to make)
     }
 }

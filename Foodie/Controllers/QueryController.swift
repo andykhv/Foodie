@@ -98,6 +98,17 @@ class QueryController: UIViewController, UISearchBarDelegate, CLLocationManagerD
         os_log("radius changed", log: OSLog.default, type: .debug)
     }
     
+    // MARK: Segue to ShakeController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        os_log("segue init", log: OSLog.default, type: .debug)
+        guard let shakeController = segue.destination as? ShakeController
+        else {
+            return
+        }
+        
+        shakeController.restaurantQuery = self.restaurantQuery
+    }
+    
     // MARK: Private
     private func determineCurrentLoc() {
         locationManager = CLLocationManager()
