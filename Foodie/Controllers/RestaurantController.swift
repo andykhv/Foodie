@@ -9,6 +9,13 @@
 import UIKit
 import os.log
 
+/* TODO:
+ * Update ImageView
+ * Update Call
+ * Update Directions
+ * Update yelp image to website
+ */
+
 class RestaurantController: UIViewController {
     // MARK: Properties
     @IBOutlet weak var nameLabel: UILabel!
@@ -19,7 +26,41 @@ class RestaurantController: UIViewController {
     @IBOutlet weak var reviewsLabel: UILabel!
     var restaurant: Restaurant!
     
+    // MARK: ViewController lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.nameLabel.text = self.restaurant.name
+        self.availabilityLabel.text = self.restaurant.is_closed ? "Closed" : "Open"
+        self.addressLabel.text = self.restaurant.location.address1
+        self.cityStateZipLabel.text = "\(self.restaurant.location.city), \(self.restaurant.location.state) \(self.restaurant.location.zip_code)"
+        self.reviewsLabel.text = String(self.restaurant.review_count)
+        self.ratingImage.image = getRatingUIImage(self.restaurant.rating)
+    }
+    
+    // MARK: private
+    // return rating UIImage based on float
+    private func getRatingUIImage(_ rating: Float) -> UIImage? {
+        switch rating {
+        case 0...1:
+            return UIImage(named: "rating0")
+        case 1...1.49:
+            return UIImage(named: "rating1")
+        case 1.5...2:
+            return UIImage(named: "rating1half")
+        case 2...2.49:
+            return UIImage(named: "rating2")
+        case 2.5...3:
+            return UIImage(named: "rating2half")
+        case 3...3.49:
+            return UIImage(named: "rating3")
+        case 3.5...4:
+            return UIImage(named: "rating3half")
+        case 4...4.49:
+            return UIImage(named: "rating4")
+        case 4.5...5:
+            return UIImage(named: "rating4half")
+        default:
+            return UIImage(named: "rating5")
+        }
     }
 }

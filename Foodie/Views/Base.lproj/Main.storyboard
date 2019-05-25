@@ -104,7 +104,7 @@
                                 </segments>
                                 <color key="tintColor" red="0.94509803920000002" green="0.65098039220000004" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="budgetChanged:" destination="4uB-g3-0vE" eventType="valueChanged" id="JqZ-LL-cg1"/>
+                                    <action selector="priceChanged:" destination="4uB-g3-0vE" eventType="valueChanged" id="Jnv-ou-suF"/>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance Radius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLe-0h-qld">
@@ -137,7 +137,7 @@
                                     <constraint firstItem="g4r-ZE-Kad" firstAttribute="width" secondItem="2Zx-dU-vDn" secondAttribute="width" id="zYM-X8-KrN"/>
                                 </constraints>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="13" minValue="1" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="Tan-rd-ABw">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="13" minValue="1" maxValue="24" translatesAutoresizingMaskIntoConstraints="NO" id="Tan-rd-ABw">
                                 <rect key="frame" x="18" y="383" width="339" height="31"/>
                                 <color key="tintColor" red="0.94509803920000002" green="0.65098039220000004" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -145,7 +145,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="dzh-6y-N4Q"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="distanceChanged:" destination="4uB-g3-0vE" eventType="valueChanged" id="e9r-kY-5w1"/>
+                                    <action selector="radiusChanged:" destination="4uB-g3-0vE" eventType="valueChanged" id="hZY-17-uK6"/>
                                 </connections>
                             </slider>
                         </subviews>
