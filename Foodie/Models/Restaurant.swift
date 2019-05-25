@@ -7,12 +7,12 @@
 //
 
 // Decodable structs for JSON parsing Yelp Fusion Business Endpoint
-struct Restaurants: Decodable {
-    let restaurants: [Restaurant]
+struct Restaurants: Codable {
+    let businesses: [Restaurant]
     let total: Int
 }
 
-struct Restaurant: Decodable {
+struct Restaurant: Codable {
     let id: String
     let name: String
     let image_url: String
@@ -22,26 +22,14 @@ struct Restaurant: Decodable {
     let rating: Float
     let location: Location
     let price: String
-    let photos: [String]
-    let hours: [Hours]
+    let is_closed: Bool
 }
 
-struct Location: Decodable {
+struct Location: Codable {
     let address1: String
-    let address2: String
+    let address2: String!
     let city: String
     let zip_code: String
     let country: String
     let state: String
-}
-
-struct Hours: Decodable {
-    let open: [Hour]
-    let is_open_now: Bool
-}
-
-struct Hour: Decodable {
-    let start: String
-    let end: String
-    let day: Int
 }

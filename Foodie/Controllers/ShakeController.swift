@@ -41,13 +41,26 @@ class ShakeController: UIViewController {
             // change image to animated loading icon
             imageView.image = loadingImage
             os_log("shaking detected", log: OSLog.default, type: .debug)
+            
+            // call YelpService.loadRestaurants
+            os_log("calling searchRestaurants", log: OSLog.default, type: .debug)
+            searchRestaurants(with: self.restaurantQuery, completion: loadRestaurantJson)
         }
     }
     
     // MARK: private
+    // closure for YelpService's searchRestaurants()
     private func loadRestaurantJson(_ response: DataResponse<Any>) -> Void {
-        // DataResponse -> String -> Restaurants struct
-        // randomize restaurant
-        // segue into RestaurantController (need to make)
+        os_log("received response", log: OSLog.default, type: .debug)
+        if let data = response.data {
+            // decode json to Restaurant struct
+            let restaurants = try! JSONDecoder().decode(Restaurants.self, from: data)
+            
+            // present RestaurantController
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let restaurantController = storyBoard.instantiateViewController(withIdentifier: "restaurantController") as! RestaurantController
+            restaurantController.restaurant = restaurants.businesses[0]
+            self.present(restaurantController, animated: true, completion: nil)
+        }
     }
 }
