@@ -9,7 +9,6 @@
 // Decodable structs for JSON parsing Yelp Fusion Business Endpoint
 struct Restaurants: Codable {
     let businesses: [Restaurant]
-    let total: Int
 }
 
 struct Restaurant: Codable {

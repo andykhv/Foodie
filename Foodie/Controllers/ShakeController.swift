@@ -59,7 +59,7 @@ class ShakeController: UIViewController {
             // present RestaurantController
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let restaurantController = storyBoard.instantiateViewController(withIdentifier: "restaurantController") as! RestaurantController
-            restaurantController.restaurant = restaurants.businesses[0]
+            restaurantController.restaurant = restaurants.businesses[Int.random(in: 0..<restaurants.businesses.count)]
             self.present(restaurantController, animated: true, completion: nil)
         }
     }
