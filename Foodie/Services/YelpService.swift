@@ -18,7 +18,6 @@ func searchRestaurants(with query: RestaurantQuery, completion completionHander:
 //        os_log("Yelp API Key not found", log: OSLog.default, type: .error)
 //        return
 //    }
-    let API_KEY = "teKfUA1ujucw1OT2Lowby9L8VEARvrm0kTgc84RJomxL5zAKdTWJu2_-szByB3hSPJLywEtawpDsmtk4pPt1naNmzVLbxmq46rdoY-BvASgVuA-bNpXrHFrwtk_HXHYx"
     let params = buildParams(with: query)
     let headers: HTTPHeaders = [
         "Authorization": "Bearer \(API_KEY)"
