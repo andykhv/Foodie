@@ -24,6 +24,7 @@ class RestaurantController: UIViewController {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var cityStateZipLabel: UILabel!
     @IBOutlet weak var reviewsLabel: UILabel!
+    @IBOutlet weak var restaurantImage: UIImageView!
     var restaurant: Restaurant!
     
     // MARK: ViewController lifecycle
@@ -35,10 +36,19 @@ class RestaurantController: UIViewController {
         self.cityStateZipLabel.text = "\(self.restaurant.location.city), \(self.restaurant.location.state) \(self.restaurant.location.zip_code)"
         self.reviewsLabel.text = String(self.restaurant.review_count)
         self.ratingImage.image = getRatingUIImage(self.restaurant.rating)
+        self.restaurantImage.image = loadRemoteImage(with: self.restaurant.image_url)
     }
     
     // MARK: private
-    // return rating UIImage based on float
+    
+    // return remote UIImage? (TODO: make asynchronous)
+    private func loadRemoteImage(with url: String) -> UIImage? {
+        let imageUrl = URL(string: url)!
+        let imageData = try! Data(contentsOf: imageUrl)
+        return UIImage(data: imageData)
+    }
+    
+    // return rating UIImage? based on float
     private func getRatingUIImage(_ rating: Float) -> UIImage? {
         switch rating {
         case 0...1:

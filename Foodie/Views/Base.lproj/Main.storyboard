@@ -377,6 +377,7 @@
                         <outlet property="cityStateZipLabel" destination="DZZ-8o-vEh" id="Zr5-sK-hhL"/>
                         <outlet property="nameLabel" destination="BCb-aS-aCT" id="z4E-b4-VgZ"/>
                         <outlet property="ratingImage" destination="R7E-pY-gV8" id="m8X-fL-egX"/>
+                        <outlet property="restaurantImage" destination="hFC-1u-Hwn" id="P0H-Yh-x7a"/>
                         <outlet property="reviewsLabel" destination="hT9-Lv-use" id="X3r-Xt-Slv"/>
                     </connections>
                 </viewController>
