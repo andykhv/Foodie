@@ -9,13 +9,6 @@
 import UIKit
 import os.log
 
-/* TODO:
- * Update ImageView
- * Update Call
- * Update Directions
- * Update yelp image to website
- */
-
 class RestaurantController: UIViewController {
     // MARK: Properties
     @IBOutlet weak var nameLabel: UILabel!
@@ -37,6 +30,14 @@ class RestaurantController: UIViewController {
         self.reviewsLabel.text = String(self.restaurant.review_count)
         self.ratingImage.image = getRatingUIImage(self.restaurant.rating)
         self.restaurantImage.image = loadRemoteImage(with: self.restaurant.image_url)
+    }
+    
+    // MARK: Actions
+    
+    // called when user presses "Dislike" button
+    @IBAction func userDislikes(_ sender: Any) {
+        // pop self from navigation stack
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: private

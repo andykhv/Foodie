@@ -26,7 +26,9 @@ class ShakeController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        imageView.image = UIImage(named: "PhoneShake")
+        // set ui
+        self.infoLabel.text = "Shake your phone to get a restaurant!"
+        self.imageView.image = UIImage(named: "PhoneShake")
     }
     
     // MARK: UIResponder
@@ -60,7 +62,7 @@ class ShakeController: UIViewController {
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let restaurantController = storyBoard.instantiateViewController(withIdentifier: "restaurantController") as! RestaurantController
             restaurantController.restaurant = restaurants.businesses[Int.random(in: 0..<restaurants.businesses.count)]
-            self.present(restaurantController, animated: true, completion: nil)
+            self.navigationController?.show(restaurantController, sender: self)
         }
     }
 }
