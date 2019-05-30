@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 import os.log
 
 class RestaurantController: UIViewController {
@@ -40,7 +41,53 @@ class RestaurantController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    // called when user presses "Like" button
+    @IBAction func showActionSheet(_ sender: Any) {
+        let menu = UIAlertController(title: nil, message: "Get Restaurant Information", preferredStyle: .actionSheet)
+        let phoneAction = UIAlertAction(title: "Call the Restaurant", style: .default, handler: self.callRestaurant)
+        let mapsAction = UIAlertAction(title: "Get Directions", style: .default, handler: self.openMapsApp)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        menu.addAction(phoneAction)
+        menu.addAction(mapsAction)
+        menu.addAction(cancelAction)
+        
+        self.present(menu, animated: true, completion: nil)
+    }
+    
+    
     // MARK: private
+    
+    // handler for phoneAction UIAlertAction
+    private func callRestaurant(_ alertAction: UIAlertAction) -> Void {
+        os_log("calling restaurant", log: OSLog.default, type: .debug)
+        if let url = URL(string: "tel://\(self.restaurant.phone)"), UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
+    }
+    
+    // handler for mapsAction UIAlertAction
+    private func openMapsApp(_ alertAction: UIAlertAction) -> Void {
+        os_log("opening Maps app with restaurant coordinates", log: OSLog.default, type: .debug)
+        
+        let latitude: CLLocationDegrees = self.restaurant.coordinates.latitude
+        let longitude: CLLocationDegrees = self.restaurant.coordinates.longitude
+        let regionDistance:CLLocationDistance = 10000
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = self.restaurant.name
+        mapItem.openInMaps(launchOptions: options)
+    }
     
     // return remote UIImage? (TODO: make asynchronous)
     private func loadRemoteImage(with url: String) -> UIImage? {

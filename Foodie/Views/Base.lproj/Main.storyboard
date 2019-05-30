@@ -343,6 +343,9 @@
                                         <state key="normal" title="Like!">
                                             <color key="titleColor" red="0.023529411764705882" green="0.83921568627450982" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="showActionSheet:" destination="UbG-lA-RM1" eventType="touchUpInside" id="4rs-jN-jpe"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -398,7 +401,6 @@
         <!--Navigation Controller-->
         <scene sceneID="cj9-mb-454">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tzN-zz-zat" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gq4-AX-Hxp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bKu-cG-cmC">
@@ -410,6 +412,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WUv-Lk-x5F"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tzN-zz-zat" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="439" y="23"/>
         </scene>

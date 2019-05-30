@@ -19,6 +19,7 @@ struct Restaurant: Codable {
     let phone: String
     let review_count: Int
     let rating: Float
+    let coordinates: Coordinates
     let location: Location
     let price: String
     let is_closed: Bool
@@ -31,4 +32,9 @@ struct Location: Codable {
     let zip_code: String
     let country: String
     let state: String
+}
+
+struct Coordinates: Codable {
+    let latitude: Double
+    let longitude: Double
 }
