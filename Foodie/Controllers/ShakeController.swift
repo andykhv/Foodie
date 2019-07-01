@@ -28,6 +28,7 @@ class ShakeController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         // set ui
         self.infoLabel.text = "Shake your phone to get a restaurant!"
+        self.infoLabel.textColor = .black
         self.imageView.image = UIImage(named: "PhoneShake")
     }
     
@@ -56,13 +57,21 @@ class ShakeController: UIViewController {
         os_log("received response", log: OSLog.default, type: .debug)
         if let data = response.data {
             // decode json to Restaurant struct
-            let restaurants = try! JSONDecoder().decode(Restaurants.self, from: data)
-            
-            // present RestaurantController
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let restaurantController = storyBoard.instantiateViewController(withIdentifier: "restaurantController") as! RestaurantController
-            restaurantController.restaurant = restaurants.businesses[Int.random(in: 0..<restaurants.businesses.count)]
-            self.navigationController?.show(restaurantController, sender: self)
+            do {
+                let restaurants = try JSONDecoder().decode(Restaurants.self, from: data)
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let restaurantController = storyBoard.instantiateViewController(withIdentifier: "restaurantController") as! RestaurantController
+                if (restaurants.businesses.count > 0) {
+                    restaurantController.restaurant = restaurants.businesses[Int.random(in: 0..<restaurants.businesses.count)]
+                    self.navigationController?.show(restaurantController, sender: self)
+                } else {
+                    self.infoLabel.text = "Cannot find a restaurant"
+                    self.infoLabel.textColor = .red
+                }
+            } catch {
+                self.infoLabel.text = "Cannot find a restaurant"
+                self.infoLabel.textColor = .red
+            }
         }
     }
 }
