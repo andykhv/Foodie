@@ -55,6 +55,15 @@ class RestaurantController: UIViewController {
         self.present(menu, animated: true, completion: nil)
     }
     
+    // called when user presses "Yelp" button
+    @IBAction func openUrl(_ sender: Any) {
+        guard let url = URL(string: self.restaurant.url) else {
+            return
+        }
+        
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+    
     
     // MARK: private
     
