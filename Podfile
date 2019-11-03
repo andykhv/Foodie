@@ -8,6 +8,10 @@ target 'Foodie' do
   # Pods for Foodie
   pod 'SwiftLint'
   pod 'Alamofire'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
 
   target 'FoodieTests' do
     inherit! :search_paths
