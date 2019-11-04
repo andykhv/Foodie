@@ -15,6 +15,7 @@ class QueryController: UIViewController, UISearchBarDelegate, CLLocationManagerD
     @IBOutlet weak var foodSearchBar: UISearchBar!
     @IBOutlet weak var locSearchBar: UISearchBar!
     @IBOutlet weak var priceSegmentControl: UISegmentedControl!
+    @IBOutlet weak var ratingSegmentControl: UISegmentedControl!
     @IBOutlet weak var radiusSlider: UISlider!
     @IBOutlet weak var radiusLabel: UILabel!
     var locationManager: CLLocationManager!
@@ -97,6 +98,22 @@ class QueryController: UIViewController, UISearchBarDelegate, CLLocationManagerD
         radiusLabel.text = String(self.restaurantQuery.radius)
         os_log("radius changed", log: OSLog.default, type: .debug)
     }
+    @IBAction func ratingChanged(_ sender: UISegmentedControl) {
+        switch ratingSegmentControl.selectedSegmentIndex {
+        case 1:
+            self.restaurantQuery.rating = 2
+        case 2:
+            self.restaurantQuery.rating = 3
+        case 3:
+            self.restaurantQuery.rating = 4
+        case 4:
+            self.restaurantQuery.rating = 5
+        default:
+            self.restaurantQuery.rating = 1
+        }
+        os_log("rating seg control changed", log: OSLog.default, type: .debug)
+    }
+    
     
     // MARK: Segue to ShakeController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

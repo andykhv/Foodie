@@ -62,7 +62,7 @@ class ShakeController: UIViewController {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let restaurantController = storyBoard.instantiateViewController(withIdentifier: "restaurantController") as! RestaurantController
                 if (restaurants.businesses.count > 0) {
-                    restaurantController.restaurant = restaurants.businesses[Int.random(in: 0..<restaurants.businesses.count)]
+                    restaurantController.restaurant = pickRestaurant(self.restaurantQuery, restaurants)
                     self.navigationController?.show(restaurantController, sender: self)
                 } else {
                     self.infoLabel.text = "Cannot find a restaurant"
@@ -73,5 +73,17 @@ class ShakeController: UIViewController {
                 self.infoLabel.textColor = .red
             }
         }
+    }
+    
+    // pick a restaurant randomly and based on user-chosen rating
+    private func pickRestaurant(_ restaurantQuery: RestaurantQuery, _ restaurants: Restaurants) -> Restaurant {
+        var pickedRestaurant = restaurants.businesses[Int.random(in: 0..<restaurants.businesses.count)]
+        print(restaurantQuery.rating)
+        print(pickedRestaurant.rating)
+        while (restaurantQuery.rating > pickedRestaurant.rating) {
+            pickedRestaurant = restaurants.businesses[Int.random(in: 0..<restaurants.businesses.count)]
+        }
+        
+        return pickedRestaurant
     }
 }

@@ -13,6 +13,7 @@ class RestaurantQuery {
     var latitude: Double?
     var longitude: Double?
     var useCurrentLoc: Bool
+    var rating: Float
     var price: Int
     var radius: Int
     
@@ -21,6 +22,7 @@ class RestaurantQuery {
         self.term = ""
         self.price = 1
         self.radius = 1
+        self.rating = 1
         self.useCurrentLoc = false
     }
 }

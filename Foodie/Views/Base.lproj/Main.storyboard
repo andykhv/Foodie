@@ -140,12 +140,41 @@
                                     <action selector="radiusChanged:" destination="4uB-g3-0vE" eventType="valueChanged" id="hZY-17-uK6"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heC-Uj-eNH">
+                                <rect key="frame" x="103.66666666666669" y="474" width="168" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="uLL-co-Lad"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2ET-qc-JJ9">
+                                <rect key="frame" x="37.666666666666657" y="528" width="300" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="2H3-tk-OGp"/>
+                                    <constraint firstAttribute="width" constant="300" id="gag-ap-kpR"/>
+                                    <constraint firstAttribute="height" constant="36" id="jvl-DQ-sgw"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="1 Star"/>
+                                    <segment title="2 Stars"/>
+                                    <segment title="3 Stars"/>
+                                    <segment title="4 Stars"/>
+                                    <segment title="5 Stars"/>
+                                </segments>
+                                <color key="tintColor" red="0.94509803920000002" green="0.65098039220000004" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="ratingChanged:" destination="4uB-g3-0vE" eventType="valueChanged" id="svy-jM-k21"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901959999995" green="1" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Xpw-ko-GWf" firstAttribute="centerX" secondItem="BL5-vQ-DVG" secondAttribute="centerX" id="0Wv-Jb-w8j"/>
                             <constraint firstItem="a3x-fx-Xhx" firstAttribute="trailing" secondItem="BL5-vQ-DVG" secondAttribute="trailing" id="2MB-sy-5Ds"/>
                             <constraint firstItem="Tan-rd-ABw" firstAttribute="top" secondItem="bLe-0h-qld" secondAttribute="bottom" constant="8" id="2n5-D7-ih4"/>
+                            <constraint firstItem="heC-Uj-eNH" firstAttribute="top" secondItem="cUS-4Q-fDL" secondAttribute="bottom" constant="24.329999999999998" id="5u9-zs-Bkc"/>
                             <constraint firstItem="bLe-0h-qld" firstAttribute="centerX" secondItem="BL5-vQ-DVG" secondAttribute="centerX" id="6Xj-zc-Pal"/>
                             <constraint firstItem="qWL-9q-NvY" firstAttribute="trailing" secondItem="BL5-vQ-DVG" secondAttribute="trailing" id="7fd-Bt-gQX"/>
                             <constraint firstItem="bLe-0h-qld" firstAttribute="top" secondItem="Xpw-ko-GWf" secondAttribute="bottom" constant="36.329999999999998" id="DOZ-dt-wRx"/>
@@ -153,10 +182,13 @@
                             <constraint firstItem="qWL-9q-NvY" firstAttribute="top" secondItem="a3x-fx-Xhx" secondAttribute="bottom" id="Ppt-HS-8Gz"/>
                             <constraint firstItem="8pB-by-IJM" firstAttribute="centerX" secondItem="BL5-vQ-DVG" secondAttribute="centerX" id="Qri-JF-cr6"/>
                             <constraint firstItem="BL5-vQ-DVG" firstAttribute="trailing" secondItem="Tan-rd-ABw" secondAttribute="trailing" constant="20" id="Xaj-xB-C14"/>
+                            <constraint firstItem="2ET-qc-JJ9" firstAttribute="top" secondItem="heC-Uj-eNH" secondAttribute="bottom" constant="25" id="ZTy-62-dxH"/>
+                            <constraint firstItem="heC-Uj-eNH" firstAttribute="centerX" secondItem="BL5-vQ-DVG" secondAttribute="centerX" id="cit-Pe-MJP"/>
                             <constraint firstItem="8pB-by-IJM" firstAttribute="top" secondItem="qWL-9q-NvY" secondAttribute="bottom" constant="26" id="fFq-xD-MYS"/>
                             <constraint firstItem="cUS-4Q-fDL" firstAttribute="centerX" secondItem="BL5-vQ-DVG" secondAttribute="centerX" id="jfM-SZ-qbQ"/>
                             <constraint firstItem="Xpw-ko-GWf" firstAttribute="top" secondItem="8pB-by-IJM" secondAttribute="bottom" constant="18.670000000000002" id="mbc-1n-6Zl"/>
                             <constraint firstItem="a3x-fx-Xhx" firstAttribute="top" secondItem="BL5-vQ-DVG" secondAttribute="top" id="ppV-qJ-hWM"/>
+                            <constraint firstItem="2ET-qc-JJ9" firstAttribute="centerX" secondItem="BL5-vQ-DVG" secondAttribute="centerX" id="q7c-oi-v5Y"/>
                             <constraint firstItem="Tan-rd-ABw" firstAttribute="leading" secondItem="BL5-vQ-DVG" secondAttribute="leading" constant="20" id="qVN-dW-QW4"/>
                             <constraint firstItem="cUS-4Q-fDL" firstAttribute="top" secondItem="Tan-rd-ABw" secondAttribute="bottom" constant="8" id="rlK-ZE-IrI"/>
                             <constraint firstItem="a3x-fx-Xhx" firstAttribute="leading" secondItem="BL5-vQ-DVG" secondAttribute="leading" id="xUd-cA-GSm"/>
@@ -176,11 +208,12 @@
                         <outlet property="priceSegmentControl" destination="Xpw-ko-GWf" id="N3p-b3-66O"/>
                         <outlet property="radiusLabel" destination="2Zx-dU-vDn" id="D7D-Im-qOi"/>
                         <outlet property="radiusSlider" destination="Tan-rd-ABw" id="KjI-L1-SaD"/>
+                        <outlet property="ratingSegmentControl" destination="2ET-qc-JJ9" id="qRZ-Sl-3uc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbV-Tq-5eX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2026" y="-288"/>
+            <point key="canvasLocation" x="2024.8" y="-288.17733990147786"/>
         </scene>
         <!--Shake Controller-->
         <scene sceneID="FfF-Fp-s5d">

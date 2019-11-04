@@ -108,23 +108,23 @@ class RestaurantController: UIViewController {
     // return rating UIImage? based on float
     private func getRatingUIImage(_ rating: Float) -> UIImage? {
         switch rating {
-        case 0...1:
+        case 0...0.99:
             return UIImage(named: "rating0")
         case 1...1.49:
             return UIImage(named: "rating1")
-        case 1.5...2:
+        case 1.5...1.99:
             return UIImage(named: "rating1half")
         case 2...2.49:
             return UIImage(named: "rating2")
-        case 2.5...3:
+        case 2.5...2.99:
             return UIImage(named: "rating2half")
         case 3...3.49:
             return UIImage(named: "rating3")
-        case 3.5...4:
+        case 3.5...3.99:
             return UIImage(named: "rating3half")
         case 4...4.49:
             return UIImage(named: "rating4")
-        case 4.5...5:
+        case 4.5...4.99:
             return UIImage(named: "rating4half")
         default:
             return UIImage(named: "rating5")
