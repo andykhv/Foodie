@@ -21,6 +21,7 @@
 		A14A1A092277879900A17F1C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A1A072277879900A17F1C /* Restaurant.swift */; };
 		A157BD59226FCC3B00C30618 /* QueryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A157BD58226FCC3B00C30618 /* QueryController.swift */; };
 		A15D0B3A2276698500BBA4F8 /* RestaurantQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15D0B392276698500BBA4F8 /* RestaurantQuery.swift */; };
+		A1651268236FE30D00E998EA /* FirebaseAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1651267236FE30D00E998EA /* FirebaseAuthenticationService.swift */; };
 		A17E5B27229860E60076D7F7 /* RestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17E5B26229860E60076D7F7 /* RestaurantController.swift */; };
 		A1B7EBB3235FB36200266E12 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B7EBB2235FB36200266E12 /* LoginController.swift */; };
 		A1B7EBB5235FB68C00266E12 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B7EBB4235FB68C00266E12 /* ProfileController.swift */; };
@@ -68,6 +69,7 @@
 		A14A1A072277879900A17F1C /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		A157BD58226FCC3B00C30618 /* QueryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryController.swift; sourceTree = "<group>"; };
 		A15D0B392276698500BBA4F8 /* RestaurantQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantQuery.swift; sourceTree = "<group>"; };
+		A1651267236FE30D00E998EA /* FirebaseAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthenticationService.swift; sourceTree = "<group>"; };
 		A17E5B26229860E60076D7F7 /* RestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantController.swift; sourceTree = "<group>"; };
 		A1B7EBB2235FB36200266E12 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		A1B7EBB4235FB68C00266E12 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				A1F9865D2284F68F002D0D3E /* YelpService.swift */,
+				A1651267236FE30D00E998EA /* FirebaseAuthenticationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				A1B7EBB3235FB36200266E12 /* LoginController.swift in Sources */,
 				A1B7EBB5235FB68C00266E12 /* ProfileController.swift in Sources */,
 				A10C11522264018600ED634F /* LandingController.swift in Sources */,
+				A1651268236FE30D00E998EA /* FirebaseAuthenticationService.swift in Sources */,
 				A157BD59226FCC3B00C30618 /* QueryController.swift in Sources */,
 				A10C11502264018600ED634F /* AppDelegate.swift in Sources */,
 				A15D0B3A2276698500BBA4F8 /* RestaurantQuery.swift in Sources */,
