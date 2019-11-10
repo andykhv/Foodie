@@ -17,6 +17,7 @@
 		A10C11652264018800ED634F /* FoodieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C11642264018800ED634F /* FoodieTests.swift */; };
 		A10C11702264018800ED634F /* FoodieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C116F2264018800ED634F /* FoodieUITests.swift */; };
 		A1346735236F993900B582AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1346734236F993900B582AE /* GoogleService-Info.plist */; };
+		A148DCE72378C9C9008EC486 /* FirebaseFirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148DCE62378C9C9008EC486 /* FirebaseFirestoreService.swift */; };
 		A14A1A082277879900A17F1C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A1A072277879900A17F1C /* Restaurant.swift */; };
 		A14A1A092277879900A17F1C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A1A072277879900A17F1C /* Restaurant.swift */; };
 		A157BD59226FCC3B00C30618 /* QueryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A157BD58226FCC3B00C30618 /* QueryController.swift */; };
@@ -66,6 +67,7 @@
 		A10C116F2264018800ED634F /* FoodieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodieUITests.swift; sourceTree = "<group>"; };
 		A10C11712264018800ED634F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1346734236F993900B582AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A148DCE62378C9C9008EC486 /* FirebaseFirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreService.swift; sourceTree = "<group>"; };
 		A14A1A072277879900A17F1C /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		A157BD58226FCC3B00C30618 /* QueryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryController.swift; sourceTree = "<group>"; };
 		A15D0B392276698500BBA4F8 /* RestaurantQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantQuery.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			children = (
 				A1F9865D2284F68F002D0D3E /* YelpService.swift */,
 				A1651267236FE30D00E998EA /* FirebaseAuthenticationService.swift */,
+				A148DCE62378C9C9008EC486 /* FirebaseFirestoreService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				A1BD7530227FA3F7008ACD39 /* ShakeController.swift in Sources */,
 				A1F9865E2284F68F002D0D3E /* YelpService.swift in Sources */,
 				A17E5B27229860E60076D7F7 /* RestaurantController.swift in Sources */,
+				A148DCE72378C9C9008EC486 /* FirebaseFirestoreService.swift in Sources */,
 				A14A1A082277879900A17F1C /* Restaurant.swift in Sources */,
 				A1B7EBB3235FB36200266E12 /* LoginController.swift in Sources */,
 				A1B7EBB5235FB68C00266E12 /* ProfileController.swift in Sources */,
