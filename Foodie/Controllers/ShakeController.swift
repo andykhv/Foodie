@@ -17,10 +17,12 @@ class ShakeController: UIViewController {
     @IBOutlet weak var infoLabel: UILabel!
     var loadingImage: UIImage!
     var restaurantQuery: RestaurantQuery!
+    var history: Set<String>!
     
     // MARK: ViewController lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.history = Set()
         // load "loading" icon
         loadingImage = UIImage.animatedImageNamed("loading", duration: 1)
     }
@@ -78,12 +80,12 @@ class ShakeController: UIViewController {
     // pick a restaurant randomly and based on user-chosen rating
     private func pickRestaurant(_ restaurantQuery: RestaurantQuery, _ restaurants: Restaurants) -> Restaurant {
         var pickedRestaurant = restaurants.businesses[Int.random(in: 0..<restaurants.businesses.count)]
-        print(restaurantQuery.rating)
-        print(pickedRestaurant.rating)
-        while (restaurantQuery.rating > pickedRestaurant.rating) {
+
+        while (restaurantQuery.rating > pickedRestaurant.rating || history.contains(pickedRestaurant.id)) {
             pickedRestaurant = restaurants.businesses[Int.random(in: 0..<restaurants.businesses.count)]
         }
-        
+
+        self.history.insert(pickedRestaurant.id)
         return pickedRestaurant
     }
 }
