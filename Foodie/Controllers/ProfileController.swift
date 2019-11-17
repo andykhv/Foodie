@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class ProfileController: UIViewController {
 
@@ -14,7 +15,16 @@ class ProfileController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
 
+        if self.isMovingFromParent {
+            logout(exception: {
+                os_log("unable to log out of Firebase Authentication", log: OSLog.default, type: .info)
+            })
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
