@@ -8,6 +8,7 @@
 
 import UIKit
 import os.log
+import Firebase
 
 class LoginController: UIViewController, UITextFieldDelegate {
     // MARK: Properties
@@ -29,6 +30,11 @@ class LoginController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.statusLabel.text = ""
+        if Auth.auth().currentUser != nil {
+          let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+          let profileController = storyBoard.instantiateViewController(withIdentifier: "profileController") as! ProfileController
+          self.navigationController?.show(profileController, sender: self)
+        }
     }
     
     // MARK: UITextFieldDelegate funcs
