@@ -21,19 +21,11 @@ class ProfileController: UIViewController, UITableViewDataSource {
         // initiallize self.restaurants
         self.tableView.dataSource = self
         
-        if let user = Auth.auth().currentUser {
-            self.emailLabel.text = user.email
-            getUserRestaurants(withUserId: user.uid, completion: {(querySnapshot, err) in
-                if let err = err {
-                    os_log("%@", log: OSLog.default, type: .info, err.localizedDescription)
-                } else {
-                    for document in querySnapshot!.documents {
-                        self.restaurants.append(self.convertDocumentToRestaurant(document.data()))
-                    }
-                    self.tableView.reloadData()
-                }
-            })
-        }
+        self.updateRestaurantTable()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.updateRestaurantTable()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -63,6 +55,24 @@ class ProfileController: UIViewController, UITableViewDataSource {
     }
     
     // MARK: Private
+    private func updateRestaurantTable() {
+        if let user = Auth.auth().currentUser {
+            self.emailLabel.text = user.email
+            var newRestaurants:[Restaurant] = []
+            getUserRestaurants(withUserId: user.uid, completion: {(querySnapshot, err) in
+                if let err = err {
+                    os_log("%@", log: OSLog.default, type: .info, err.localizedDescription)
+                } else {
+                    for document in querySnapshot!.documents {
+                        newRestaurants.append(self.convertDocumentToRestaurant(document.data()))
+                    }
+                    self.restaurants = newRestaurants
+                    self.tableView.reloadData()
+                }
+            })
+        }
+    }
+    
     private func convertDocumentToRestaurant(_ document: [String : Any]) -> Restaurant {
         let restaurant = Restaurant(
             id: document["id"] as! String,

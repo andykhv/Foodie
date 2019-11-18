@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import os.log
+import Firebase
 
 class RestaurantController: UIViewController {
     // MARK: Properties
@@ -43,6 +44,7 @@ class RestaurantController: UIViewController {
     
     // called when user presses "Like" button
     @IBAction func showActionSheet(_ sender: Any) {
+        addRestaurantToDB()
         let menu = UIAlertController(title: nil, message: "Get Restaurant Information", preferredStyle: .actionSheet)
         let phoneAction = UIAlertAction(title: "Call the Restaurant", style: .default, handler: self.callRestaurant)
         let mapsAction = UIAlertAction(title: "Get Directions", style: .default, handler: self.openMapsApp)
@@ -66,6 +68,12 @@ class RestaurantController: UIViewController {
     
     
     // MARK: private
+    
+    private func addRestaurantToDB() {
+        if let user = Auth.auth().currentUser {
+            addUserRestaurant(withUserId: user.uid, restaurant: self.restaurant)
+        }
+    }
     
     // handler for phoneAction UIAlertAction
     private func callRestaurant(_ alertAction: UIAlertAction) -> Void {
